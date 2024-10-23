@@ -3,7 +3,7 @@
 
 /* Définition des variables de couleur */
 :root {
-  --primary-color: #8A2BE2; /* Violet */
+  --primary-color: #e22b2b; /* Violet */
   --secondary-color: #000000; /* Noir */
   --light-color: #FFFFFF; /* Blanc */
   --accent-color: #0056b3; /* Bleu plus foncé */
@@ -16,21 +16,22 @@ body {
   font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins */
   background-color: #f4f4f4; /* Couleur d'arrière-plan */
   color: var(--secondary-color); /* Couleur du texte par défaut */
-}
-
-.container {
-  max-width: 100%;
-  margin: 100%;
-  padding: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* En-tête */
 .main-header {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Couleur violet */
   color: var(--light-color);
   padding: 20px;
   border-radius: 30px;
-  text-align: center; /* Centrage du texte */
+  width: 100%; /* Prendre toute la largeur */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer le contenu horizontalement */
+  text-align: center; /* Centrer le texte */
 }
 
 .main-header h1 {
@@ -38,13 +39,12 @@ body {
   font-size: 36px; /* Taille de police plus grande pour le titre */
 }
 
+/* Barre de navigation */
 .main-nav {
+  width: 100%; /* Prendre toute la largeur */
   display: flex;
-  justify-content: space-between;
-}
-
-.menu-icon {
-  display: none;
+  justify-content: center; /* Centrage horizontal de la barre de navigation */
+  align-items: center;
 }
 
 .menu {
@@ -52,6 +52,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center; /* Centrage des éléments du menu */
+  align-items: center;
 }
 
 .menu li a {
@@ -59,13 +61,23 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
-  margin-right: 9px; /* Ajout d'une marge droite pour créer de l'espace entre les noms de section */
+  margin-right: 20px; /* Ajout d'une marge droite pour espacer les liens */
 }
 
 .menu li a:hover {
   color: rgb(38, 0, 255);
   text-shadow: 0 0 5px var(--secondary-color);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pied de page */
+.footer {
+  background-color: var(--primary-color); /* Couleur violet */
+  color: var(--light-color);
+  text-align: center; /* Centrer le texte dans le pied de page */
+  padding: 20px;
+  width: 100%; /* Prendre toute la largeur */
+  position: relative;
 }
 
 /* Conteneur principal avec une largeur maximale de 1200px */
@@ -75,6 +87,7 @@ body {
   padding: 0 20px;
   justify-content: center;
 }
+
 
 /* Styles pour les sections de la page */
 .section {
@@ -177,7 +190,7 @@ footer {
 }
 
 #partners h2 {
-  color: #8a2be2;
+  color: #e22b2b;
   margin-bottom: 30px;
 }
 
@@ -240,18 +253,21 @@ a:hover {
   margin: 0 auto; /* Centrage horizontal */
 }
 
+/* Galerie d'images */
 .image-gallery {
   display: flex;
   justify-content: center; /* Centrage horizontal des images */
   flex-wrap: wrap; /* Permettre le retour à la ligne des images si elles ne rentrent pas toutes sur une seule ligne */
   margin-top: 2px;
+  max-width: 1200px; /* Optionnel : limite la largeur de la galerie */
 }
 
 /* Pour les images dans la section Galerie */
 .image-gallery img {
   max-width: 100%; /* La largeur maximale de l'image est égale à la largeur de son conteneur parent */
   height: auto; /* Hauteur automatique pour conserver les proportions de l'image */
-  margin-bottom: 20px; /* Ajouter un espacement en bas de chaque image */
+  margin: 10px; /* Ajouter un espacement autour de chaque image */
+  flex: 1 1 300px; /* Rendre chaque image flexible pour une meilleure disposition */
 }
 
 
@@ -265,7 +281,7 @@ a:hover {
 }
 
 #projects h2 {
-  color: #8a2be2;
+  color: #e22b2b;
   margin-bottom: 30px;
 }
 
@@ -275,7 +291,7 @@ a:hover {
 }
 
 .project h3 {
-  color: #8a2be2;
+  color: #e22b2b;
   margin-bottom: 10px;
 }
 
@@ -303,7 +319,7 @@ a:hover {
 }
 
 #community h2 {
-  color: #8a2be2;
+  color: #e22b2b;
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -356,7 +372,7 @@ a:hover {
 }
 
 #partners h2 {
-  color: #8a2be2;
+  color: #e22b2b;
   margin-bottom: 30px;
 }
 
@@ -392,7 +408,7 @@ a:hover {
 }
 
 .partner-info a {
-  color: #8a2be2;
+  color: #e22b2b;
   text-decoration: none;
 }
 
@@ -402,7 +418,7 @@ a:hover {
 
 .partner-info .tiktok-link {
   margin-left: 10px; /* Espacement entre les liens */
-  color: #8a2be2; /* Couleur distincte pour le lien TikTok */
+  color: #e22b2b; /* Couleur distincte pour le lien TikTok */
 }
 
 /* Style pour la section FAQ */
@@ -415,7 +431,7 @@ a:hover {
 }
 
 #faq h2 {
-  color: #8a2be2; /* Couleur du titre FAQ */
+  color: #e22b2b; /* Couleur du titre FAQ */
   font-size: 2rem; /* Taille de police du titre */
   margin-bottom: 20px; /* Espacement en bas du titre */
 }
@@ -434,7 +450,7 @@ a:hover {
 }
 
 .faq-item h3 {
-  color: #8a2be2; /* Couleur du titre de la question */
+  color: #e22b2b; /* Couleur du titre de la question */
   margin-top: 0; /* Supprimer l'espacement en haut du titre */
 }
 
@@ -450,10 +466,49 @@ a:hover {
   border-radius: 50%; /* Créer un cercle avec le bord arrondi */
   object-fit: cover; /* Assurez-vous que l'image couvre entièrement le cercle */
   margin-bottom: 10px; /* Espacement entre les membres d'équipe */
+  transition: transform 0.3s ease; /* Animation sur le survol */
 }
 
-.profile-img {
-  border-radius: 100%; /* Pour créer une forme de cercle */
-  width: 50%; /* Définir la largeur souhaitée */
-  height: 50%; /* Définir la hauteur souhaitée */
+.team-member {
+  text-align: center; /* Centrage du texte */
+  margin: 20px; /* Marge autour de chaque membre */
+  transition: transform 0.3s ease; /* Animation pour le membre */
+}
+
+.team-member:hover {
+  transform: scale(1.05); /* Agrandissement au survol */
+}
+
+.social-links {
+  margin-top: 10px; /* Espacement entre le texte et les liens */
+}
+
+.social-links a {
+  margin: 0 5px; /* Espacement entre les liens */
+  text-decoration: none; /* Supprime le soulignement */
+  color: var(--primary-color); /* Couleur du lien */
+  transition: color 0.3s ease; /* Animation pour le survol */
+}
+
+.social-links a:hover {
+  color: rgb(38, 0, 255); /* Couleur au survol */
+}
+
+.join-team {
+  text-align: center; /* Centrage du bouton */
+  margin-top: 30px; /* Espacement au-dessus du bouton */
+}
+
+.join-team-button {
+  background-color: var(--primary-color); /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de pointeur */
+  transition: background-color 0.3s ease; /* Animation pour le survol */
+}
+
+.join-team-button:hover {
+  background-color: rgb(38, 0, 255); /* Couleur de fond au survol */
 }
